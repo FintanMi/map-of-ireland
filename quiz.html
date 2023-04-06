@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&family=Montserrat:ital,wght@1,300&family=Mukta:wght@500&family=Nunito:ital,wght@1,300;1,400&family=Roboto+Condensed:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- links to favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+
+    <title>Quiz App</title>
+</head>
+<body>
+    <main>
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="assets/images/harp.png" alt="site logo" id="logo">
+            </a>
+        </div>
+        <div class="neon-container">
+            <h1 class="neon-text"><span>I</span>re<span>land</span></h1>
+        </div>
+        <div class="glitch-container">
+            <h2 class="glitch" data-text="glitch"><span class="fast-flicker">C</span>ou<span class="flicker">nty</span> <br><span class="fast-flicker">Qui</span>z</h2>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-counter">
+                <p id="progressText" class="prefix">Question</p>
+                <div id="progressBar">
+                    <div id="progress"></div>
+                </div>
+            </div>
+            <div class="progress-counter">
+                <p class="prefix">Score</p>
+                <p class="counter-number" id="scores">0</p>
+            </div>
+        </div>
+        <div class="container" id="quiz">
+            <div class="game" id="game">
+                <h2 id="question">What is the answer to the following question?</h2>
+                <div class="container-choice">
+                    <p class="choice-item">A</p>
+                    <p class="choice-text" data-number="1">Choice 1</p>
+                </div>
+                <div class="container-choice">
+                    <p class="choice-item">B</p>
+                    <p class="choice-text" data-number="2">Choice 2</p>
+                </div>
+                <div class="container-choice">
+                    <p class="choice-item">C</p>
+                    <p class="choice-text" data-number="3">Choice 3</p>
+                </div>
+                <div class="container-choice">
+                    <p class="choice-item">D</p>
+                    <p class="choice-text" data-number="4">Choice 4</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script src="assets/javascript/game.js"></script>
+    <!-- <script src="assets/javascript/script.js"></script> -->
+</body>
+</html>

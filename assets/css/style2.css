@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&family=Montserrat:ital,wght@1,300&family=Mukta:wght@500&family=Nunito:ital,wght@1,300;1,400&family=Roboto+Condensed:ital@1&display=swap');
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Mukta","Lato", sans-serif;
+    background-image: linear-gradient(to right bottom, rgba(85, 197, 122, 0.75),rgba(0, 154, 67, 0.8)), url('../images/ireland-outline.png');
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto 1px auto;
+    max-height: 150px;
+}
+
+#logo {
+    padding: 1rem;
+    max-height: 6rem;
+    cursor: pointer;
+}
+
+.instruct-link {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #ff8200;
+  background-color: #fff;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.intro-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.map{
+  color: #fff;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff8200, 0 0 0.5em #ff8200, 0 0 0.1em #ff8200, 0 8px 3px #000;
+  text-transform: uppercase;
+  margin: 0 auto;
+}
+  
+.play-container {
+  margin: 2rem 0;
+  animation: blink linear infinite 2s;
+}
+
+.play-btn {
+  text-decoration: none;
+  color: #fff;
+  font-size: 2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  text-shadow: 0 -40px 100px, 0 0 2px, 0 0 1em #ff8200, 0 0 0.5em #ff8200, 0 0 0.1em #ff8200, 0 8px 3px #000;
+  animation: flicker 1.5s infinite alternate;
+}
+  
+.play-btn:focus {
+ outline: none;
+}
+
+h1 {
+  font-size: 3.2rem;
+}
+
+p {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.flicker {
+  animation: shine 2s forwards, blink 3s 2s infinite;
+}
+      
+.fast-flicker {
+  animation: shine 2s forwards, blink 10s 1s infinite;
+} 
+    
+@keyframes shine {
+  0% {
+    color: #ff8200;
+    text-shadow: none;
+  }
+  100% {
+    color: #fff;
+    text-shadow: 0 0 0.6rem #ff8200, 0 0 1.5rem #ff8200,
+      -0.2rem 0.1rem 1rem #ff8200, 0.2rem 0.1rem 1rem #ff8200,
+      0 -0.5rem 2rem #ff8200, 0 0.5rem 3rem #ff8200;
+  }
+}
+      
+@keyframes flicker {
+  from {
+    opacity: 1;
+  }
+
+  4% {
+    opacity: 0.9;
+  }
+   
+  6% {
+    opacity: 0.85;
+  }
+   
+  8% {
+    opacity: 0.95;
+  }
+    
+  10% {
+    opacity: 0.9;
+  }
+    
+  11% {
+    opacity: 0.922;
+  }
+    
+  12% {
+    opacity: 0.9;
+  }
+    
+  14% {
+    opacity: 0.95;
+  }
+    
+  16% {
+    opacity: 0.98;
+  }
+    
+  17% {
+    opacity: 0.9;
+  }
+    
+  19% {
+    opacity: 0.93;
+  }
+    
+  20% {
+    opacity: 0.99;
+  }
+    
+  24% {
+    opacity: 1;
+  }
+
+  26% {
+    opacity: 0.94;
+  }
+    
+  28% {
+    opacity: 0.98;
+  }
+    
+  37% {
+    opacity: 0.93;
+  }
+    
+  38% {
+    opacity: 0.5;
+  }
+    
+  39% {
+    opacity: 0.96;
+  }
+    
+  42% {
+    opacity: 1;
+  }
+    
+  44% {
+    opacity: 0.97;
+  }
+    
+  46% {
+    opacity: 0.94;
+  }
+    
+  56% {
+    opacity: 0.9;
+  }
+    
+  58% {
+    opacity: 0.9;
+  }
+    
+  60% {
+    opacity: 0.99;
+  }
+    
+  68% {
+    opacity: 1;
+  }
+    
+  70% {
+     opacity: 0.9;
+  }
+    
+  72% {
+    opacity: 0.95;
+  }
+    
+  93% {
+    opacity: 0.93;
+  }
+    
+  95% {
+    opacity: 0.95;
+  }
+    
+  97% {
+     opacity: 0.93;
+  }
+    
+  to {
+    opacity: 1;
+  }
+}
+
+/* for screen sizes 540px wide and down. 540px/16px = 31.25rem */
+
+@media screen and (max-width: 33.75rem) {
+  .header {
+    display: block;
+    text-align: center;
+    /* top: 15%;
+    left: 40%;
+    transform: translateY(-10%); */
+  }
+
+  #quiz {
+    width: 98vw;
+  }
+
+  /* .map {
+    display: inline-flex;
+    text-align: center;
+  } */
+
+  .neon-container, .glitch-container {
+    display: none;
+  }
+}
+
+/* style sign up btn */
+.cta-modal-btn {
+  color: #009a44;
+  font-size: 1.2rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.cta-modal-btn:active {
+  transform: scale(0.96);
+}
+
+/* style sign up container */
+.submit-btn-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.submit-btn-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+}
+
+/* style modal */
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 35rem;
+  animation-name: modalopen;
+  animation-duration: 1s;
+}
+
+.modal-header {
+  background-color: #ff8200;
+  color: #000;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+}
+
+.modal-content {
+  padding: 1rem;
+}
+
+.modal-form div {
+  margin: .75rem;
+}
+
+.modal-form label {
+  display: block;
+  margin: 2px;
+}
+
+.modal-form .modal-form-input {
+  padding: .5rem;
+  width: 95%;
+}
+
+.close-modal-btn {
+  background: transparent;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 16px;
+  right: 0;
+  cursor: pointer;
+  border: none;
+}
+
+.submit-modal-btn {
+  color: #000;
+  background-color: #ff8200;
+  font-weight: bold;
+  font-size: 1rem;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 8px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.submit-modal-btn:active {
+  transform: scale(0.96);
+}
+
+/* brings in modal  */
+@keyframes modalopen {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* instructions page */
+
+.instructions-container {
+  font-size: 2rem;
+  text-decoration: none;
+}
+
+.instructions-container li {
+  text-align: center;
+  list-style: none;
+}
+
+.play-container {
+  text-align: center;
+}
+
+/* for screen sizes 540px wide and down. 540px/16px = 33.75rem */
+@media screen and (max-width: 33.75rem) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+/* for screen sizes 420px wide and down. 420px/16px = 26.65rem */
+@media screen and (max-width: 26.65rem) {
+  .intro-container h1 {
+    text-align: center;
+  }
+}
