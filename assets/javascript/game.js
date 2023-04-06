@@ -110,11 +110,12 @@ getNewQuestion = () => {
     if(availableQuestion.length === 0 || questionCounter > maxQuestions){
         localStorage.setItem('recentScore', score);
         // go to last page
-        return window.location.assign('finish.html');
+        return window.location.assign('/finish.html');
     }
 
     questionCounter++;
     progress.innerText = `Question ${questionCounter}/${maxQuestions}`;
+    // update progress bar
     progressLine.style.width = `${(questionCounter/maxQuestions) * 100}%`;
 
     const questionIndex = Math.floor(Math.random() * availableQuestion.length);
@@ -161,6 +162,3 @@ updateScore = num => {
 
 startGame();
 
-const finalScore = document.getElementById('final-score');
-const recentScore = localStorage.getItem('recentScore');
-finalScore.innerText = recentScore;
