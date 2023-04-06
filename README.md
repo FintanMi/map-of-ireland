@@ -1,108 +1,173 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Map Quiz
 
-Welcome FintanMi,
+Map Quiz is a multiple choice quiz where players are given an Irish county nickname and they have to select the correct county. There are four options on every question, with ten questions in total.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+![Mock Up](docs/readme_images/responsive.JPG)
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+[Map Quiz](https://fintanmi.github.io/map-quiz/)
 
-## Gitpod Reminders
+## Features
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+### Site Wide
+* Logo in the header to allow players to return to the home page
+* Favicon
+   * A harp is featured on each page
+   * This will provide a visual element for a player to easily identify the page if they have multiple tabs open
+   ![Favicon](docs/readme_images/quiz-app-tab.JPG)
+ 
+*Home Page*
+- Game instructions button in the header to explain what the quiz is about
+- Harp icon in the header that the user can click once the quiz has started that will bring them back to the home page
+- A brief explanation of what the quiz is about
+- Play button to initiate the quiz
+- Sign up button that displays a modal, allowing players to sign up in order to get access to the full range of games
+![Home Page Image](docs/readme_images/home-page.JPG)
 
-`python3 -m http.server`
+*Sign Up Modal*
+- A modal pops up with serveral input fields for a player to upload their name, email and password if they wish to join
+![Sign Up Modal](docs/readme_images/sign-up-modal.JPG)
 
-A blue button should appear to click: _Make Public_,
+*Instructions*
+- Tells players how to play the quiz
+- Button links to the quiz page
+![Instructions Page](docs/readme_images/instructions.JPG)
 
-Another blue button should appear to click: _Open Browser_.
+*Quiz Pages*
+- Question counter with a progress bar to show how many questions have been answered
+- Score counter to show how many questions the player has answered correctly
+- Neon written effects on either side of the quiz container to give an arcade feel
+- Quiz container with the question on top and the four possible answer below
+- The answer will flash green (correct answer) or red (wrong answer) for half a second before changing to the next question
+- The score begins at zero and each correct answer will add ten to their score, meaning the best score a player can acheive is one hundred
+![Quiz Page Image](docs/readme_images/quiz-page.JPG)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+*Finish Page*
+- The player will see a play again button that will divert them back to the home page
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## Wireframes
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- Home Page
+![home page wireframe](docs/readme_images/quiz-app-home.JPG)
+![home page wireframe](docs/readme_images/quiz-app-home-mobile.JPG)
 
-To log into the Heroku toolbelt CLI:
+- Sign Up Modal
+![home page wireframe](docs/readme_images/sign-up-modal-mockup.JPG)
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+- Instructions Page
+![home page wireframe](docs/readme_images/instruction-mockup.JPG)
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+- Quiz Page
+![home page wireframe](docs/readme_images/quiz-content-mockup.JPG)
+![home page wireframe](docs/readme_images/quiz-content-mobile.JPG)
 
-------
+## Technologies
 
-## Release History
+- HTML
+  - The structure of the website was developed using HTML
+- CSS
+  - The Website was styled using custom CSS in external files
+- JavaScript
+  - The game play logic was created using JavaScript in external files
+- GitHub
+  - Source code is hosted on GitHub and delpoyed using Git Pages.
+- Gitpod
+  - Used to commit and push code during the development of the Website
+- Favicon.io
+  - favicon file was created at https://favicon.io/favicon-converter/
+- balsamiq
+  - wireframes were created using balsamiq from https://balsamiq.com/wireframes/desktop/
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Testing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+### Responsiveness
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+All pages were tested to ensure the layout was correctly displaying the quiz all device sizes down to 280 pixels.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+Steps to test:
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+1. Open browser and navigate to [Quiz App](https://fintanmi.github.io/map-quiz/)
+2. Open the developer tools (right click and inspect)
+3. Set to responsive and set zoom to 50%
+4. Go through each of the device types to ensure the layout is correct
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Expected:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Website is responsive on all screen sizes
+No horizontal scroll is present
+No elements overlap
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Actual:
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+Website behaved as expected.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+### Accessibility
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+**Lighthouse Report**
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Lighthouse report generated scores ranging from 92 to 100
+![Lighthouse report](docs/readme_images/quiz-lighthouse.JPG)
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Manual tests were performed to ensure the each answer highlighted green or red depending on if the correct or incorrect answer was selected before the next question appeared. This was acheived by clicking on each option.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Testing was also performed to ensure that when the logo was clicked on the quiz pages it brought the player back to the home page. This was done by clicking on the logo when a new question loaded.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Validator Testing**
 
-------
+-HTML
+  - Three errors relating to the same id name been used was highlighted when passed through [W3C validator](https://validator.w3.org)
+  - Changes were implemented
+ ![Home HTML Validator Result](docs/readme_images/quiz-html-check.JPG)
+ ![Quiz Content HTML Validator Result](docs/readme_images/quiz-content-html-check.JPG)
 
-## FAQ about the uptime script
+-CSS
+  - No errors found when put through [(Jigsaw) validator](https://jigsaw.w3.org)
+  ![CSS Validator Result](docs/readme_images/quiz-css-check.JPG)
+  
+ -Javascript
+  - No errors when put through [JShint validator](https://jshint.com/)
+  - Numerous warnings were present regarding const/let/arrow functions/template literal syntax/spread operator
+  - Four undefined variables were declared but each one they're used for bringing in the quiz content, progress bar and updating the score
+  
+  ![JavaScript Validator Result](docs/readme_images/js-check.JPG)
+  
+ ## Deployment
+ 
+ ### Version Control
 
-**Why have you added this script?**
+The site was created using gitpod and pushed to github to a remote repository
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+The following git commands were used throughout development to push code to the remote repository:
 
-**How will this affect me?**
+```git add .``` - This command was used to add all files to the staging area before they are committed
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+```git commit -m “commit message”``` - This command was used to commit changes to the local repository queue ready for the final step
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+```git push``` - This command was used to push all committed code to the remote repository on github
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Deployment to Github Pages
 
-**So….?**
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the menu on left select 'Pages'
+  - From the source section drop-down menu, select the Branch: main
+  - Click 'Save'
+  - A live link will be displayed in a green banner when published successfully.
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+The live link can be found here - https://fintanmi.github.io/map-quiz/
 
-**Can I opt out?**
+### Clone the Repository Code Locally
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+Navigate to the GitHub Repository you want to clone to use locally:
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
+- Click on the code drop down button
+- Click on HTTPS
+- Copy the repository link to the clipboard
+- Open your IDE of choice (git must be installed for the next steps)
+- Type git clone copied-git-url into the IDE terminal
 
-**Anything more?**
+The project will now have been cloned on your local machine for use.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+## Credits
 
----
-
-Happy coding!
+* Some JavaScript was used from the Udemy courses '50 Projects in 50 Days - HTML, CSS and JavaScript' and '20 Web Projects with Vanilla JavaScript'
