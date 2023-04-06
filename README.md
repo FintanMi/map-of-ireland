@@ -4,7 +4,7 @@ Map Quiz is a multiple choice quiz where players are given an Irish county nickn
 
 ![Mock Up](docs/readme_images/responsive.JPG)
 
-[Map Quiz](https://fintanmi.github.io/map-quiz/)
+[Map Quiz](https://fintanmi.github.io/map-of-ireland/)
 
 ## Features
 
@@ -86,7 +86,7 @@ All pages were tested to ensure the layout was correctly displaying the quiz all
 
 Steps to test:
 
-1. Open browser and navigate to [Quiz App](https://fintanmi.github.io/map-quiz/)
+1. Open browser and navigate to [Quiz App](https://fintanmi.github.io/map-of-ireland/)
 2. Open the developer tools (right click and inspect)
 3. Set to responsive and set zoom to 50%
 4. Go through each of the device types to ensure the layout is correct
