@@ -154,7 +154,7 @@ The following git commands were used throughout development to push code to the 
   - Click 'Save'
   - A live link will be displayed in a green banner when published successfully.
 
-The live link can be found here - https://fintanmi.github.io/map-quiz/
+The live link can be found here - https://fintanmi.github.io/map-of-ireland/
 
 ### Clone the Repository Code Locally
 
