@@ -110,7 +110,7 @@ getNewQuestion = () => {
     if(availableQuestion.length === 0 || questionCounter > maxQuestions){
         localStorage.setItem('recentScore', score);
         // go to last page
-        return window.location.assign('../../finish.html');
+        return window.location.assign('finish.html');
     }
 
     questionCounter++;
@@ -120,7 +120,7 @@ getNewQuestion = () => {
 
     const questionIndex = Math.floor(Math.random() * availableQuestion.length);
     currentQuestion = availableQuestion[questionIndex];
-    question.innerText = currentQuestion.question;
+    document.getElementById('question').innerText = currentQuestion.question;
 
     answerElement.forEach(choice => {
         const number = choice.dataset['number'];
